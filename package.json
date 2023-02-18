@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "build": "tsc; npx webpack build --config ./webpack.js; cp src/*.html browser/; cp src/*.njk server/ ; cd server; node Precompile.js > ../browser/test1.njk.js"
+  },
+  "dependencies": {
+    "nunjucksBB": "github:benbriedis/nunjucksBB",
+    "ts-loader": "^9.4.2",
+    "webpack-bundle-analyzer": "^4.8.0"
+  },
+  "buildDependencies": {
+    "webpack-cli": "^5.0.1",
+    "ts-loader": "9.3.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}
